@@ -18,7 +18,7 @@ public class Driver {
 
 
         //Delete contact
-        contactBook.deleteContact("Micheal Agyemang","michealagyemang@yahoo.com");
+        contactBook.deleteContact("Michael Agyemang", "michaelagyemang@yahoo.com");
 
 
 
