@@ -1,7 +1,7 @@
 
 
 public class Contact {
-    private final String name;
+    private  String name;
     private String email;
 
     public  Contact(String name, String email){
@@ -19,5 +19,9 @@ public class Contact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 }

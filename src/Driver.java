@@ -10,13 +10,17 @@ public class Driver {
         contactBook.addContact("Michael Agyemang", "michaelagyemang@yahoo.com");
 
         //Read or See all contacts in ContactBook
+        contactBook.displayContact();
 
         //Update contact in ContactBook
+        contactBook.updateContact("Evans Ankomah", "David","ankomahevans640@gmail.com");
+        contactBook.updateContact("Michael Agyemang", "David", "Daniel@gmail.com");
 
 
+        //Delete contact
+        contactBook.deleteContact("Micheal Agyemang","michealagyemang@yahoo.com");
 
-        //Displaying all contacts in Contact book
-        contactBook.displayContact();
+
 
 
     }

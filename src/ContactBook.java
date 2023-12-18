@@ -8,17 +8,19 @@ public class ContactBook {
         System.out.println("Contact has been added successfully\n");
     }
 
-    public void updateContact(String name, String newEmail){
+    public void updateContact(String name, String newName,String newEmail){
         boolean contactFound = false;
 
         for (Contact contact : contactList) {
             if (contact.getName().equals(name)) {
                 // Contact found, update the email
+                contact.setName(newName);
                 contact.setEmail(newEmail);
                 contactFound = true;
                 System.out.println("Contact has been updated successfully\n");
                 break; // Exit the loop since the contact has been found and updated
             }
+
         }
 
         if (!contactFound) {
@@ -32,6 +34,17 @@ public class ContactBook {
         System.out.println("***********************");
         for (Contact contact : contactList) {
             System.out.println(contact.getName() + ", " + contact.getEmail());
+        }
+    }
+
+    public void deleteContact(String name, String email) {
+        Contact contactToDelete = new Contact(name, email); // Creating a temporary contact for comparison
+
+        if (contactList.contains(contactToDelete)) {
+            contactList.remove(contactToDelete);
+            System.out.println("Contact has been deleted successfully\n");
+        } else {
+            System.out.println("Contact not found. Unable to delete\n");
         }
     }
 }
